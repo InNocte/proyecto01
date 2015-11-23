@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @videojuego.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @videojuego.descripcion %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @videojuego.precio %>
+</p>
+
+<p>
+  <strong>Fechanacimiento:</strong>
+  <%= @videojuego.fechanacimiento %>
+</p>
+
+<%= link_to 'Edit', edit_videojuego_path(@videojuego) %> |
+<%= link_to 'Back', videojuegos_path %>

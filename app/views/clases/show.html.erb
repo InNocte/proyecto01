@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Genero:</strong>
+  <%= @clase.genero %>
+</p>
+
+<p>
+  <strong>Plataforma:</strong>
+  <%= @clase.plataforma %>
+</p>
+
+<p>
+  <strong>Multijugador:</strong>
+  <%= @clase.multijugador %>
+</p>
+
+<%= link_to 'Edit', edit_clase_path(@clase) %> |
+<%= link_to 'Back', clases_path %>

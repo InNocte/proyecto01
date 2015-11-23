@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  genero: MyString
+  plataforma: MyString
+  multijugador: false
+
+two:
+  genero: MyString
+  plataforma: MyString
+  multijugador: false

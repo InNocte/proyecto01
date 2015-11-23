@@ -1,0 +1,31 @@
+<h1>Listing videojuegos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th>Fechanacimiento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @videojuegos.each do |videojuego| %>
+      <tr>
+        <td><%= videojuego.nombre %></td>
+        <td><%= videojuego.descripcion %></td>
+        <td><%= videojuego.precio %></td>
+        <td><%= videojuego.fechanacimiento %></td>
+        <td><%= link_to 'Show', videojuego %></td>
+        <td><%= link_to 'Edit', edit_videojuego_path(videojuego) %></td>
+        <td><%= link_to 'Destroy', videojuego, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Videojuego', new_videojuego_path %>

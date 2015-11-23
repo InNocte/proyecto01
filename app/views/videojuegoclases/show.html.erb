@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Videojuego:</strong>
+  <%= @videojuegoclase.videojuego.nombre %>
+</p>
+
+<p>
+  <strong>Clase:</strong>
+  <%= @videojuegoclase.clase.genero %>
+</p>
+
+<%= link_to 'Edit', edit_videojuegoclase_path(@videojuegoclase) %> |
+<%= link_to 'Back', videojuegoclases_path %>

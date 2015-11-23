@@ -1,0 +1,25 @@
+<%= form_for(@videojuegoclase) do |f| %>
+  <% if @videojuegoclase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@videojuegoclase.errors.count, "error") %> prohibited this videojuegoclase from being saved:</h2>
+
+      <ul>
+      <% @videojuegoclase.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :videojuego_id %><br>
+     <%= f.select( "videojuego_id",Videojuego.all.collect{|l| [ l.nombre, l.id ] }, {include_blank: 'Seleccione Videojuego'}) %>
+  </div>
+  <div class="field">
+    <%= f.label :clase_id %><br>
+     <%= f.select( "clase_id",Clase.all.collect{|l| [ l.genero, l.id ] }, {include_blank: 'Seleccione el Clase'}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
